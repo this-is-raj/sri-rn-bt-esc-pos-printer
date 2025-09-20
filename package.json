@@ -1,8 +1,8 @@
 {
-  "name": "react-native-bluetooth-escpos-printer",
+  "name": "sri-rn-bt-esc-pos-printer",
   "version": "0.0.6",
-  "description": "React-Native plugin for the bluetooth ESC/POS printers.",
-  "main": "index.js",
+  "description": "React-Native/Expo plugin for the bluetooth ESC/POS printers.",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,11 +11,15 @@
     "ESC",
     "POS",
     "Bluetooth",
-    "Printer"
+    "Printer",
+    "Expo",
+    "San Raj"
   ],
-  "author": "janus j k lu",
+  "author": "San Raj Software Solutions",
   "license": "MIT",
-  "peerDependencies": {
-    "react-native": ">=0.55.4"
+  "peerDependencies": {},
+  "dependencies": {
+    "react-native": "*",
+    "react-native-permissions": "^5.4.2"
   }
 }

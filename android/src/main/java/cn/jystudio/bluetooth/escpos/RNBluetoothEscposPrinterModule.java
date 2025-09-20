@@ -1,15 +1,15 @@
 
-package cn.jystudio.bluetooth.escpos;
+package cn.sri.bluetooth.escpos;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 import android.util.Log;
-import cn.jystudio.bluetooth.BluetoothService;
-import cn.jystudio.bluetooth.BluetoothServiceStateObserver;
-import cn.jystudio.bluetooth.escpos.command.sdk.Command;
-import cn.jystudio.bluetooth.escpos.command.sdk.PrintPicture;
-import cn.jystudio.bluetooth.escpos.command.sdk.PrinterCommand;
+import cn.sri.bluetooth.BluetoothService;
+import cn.sri.bluetooth.BluetoothServiceStateObserver;
+import cn.sri.bluetooth.escpos.command.sdk.Command;
+import cn.sri.bluetooth.escpos.command.sdk.PrintPicture;
+import cn.sri.bluetooth.escpos.command.sdk.PrinterCommand;
 import com.facebook.react.bridge.*;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -132,13 +132,13 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
     @ReactMethod
     public void printText(String text, @Nullable  ReadableMap options, final Promise promise) {
         try {
-            String encoding = "GBK";
+            String encoding = "UTF-8";
             int codepage = 0;
             int widthTimes = 0;
             int heigthTimes=0;
             int fonttype=0;
             if(options!=null) {
-                encoding = options.hasKey("encoding") ? options.getString("encoding") : "GBK";
+                encoding = options.hasKey("encoding") ? options.getString("encoding") : "UTF-8";
                 codepage = options.hasKey("codepage") ? options.getInt("codepage") : 0;
                 widthTimes = options.hasKey("widthtimes") ? options.getInt("widthtimes") : 0;
                 heigthTimes = options.hasKey("heigthtimes") ? options.getInt("heigthtimes") : 0;
@@ -178,13 +178,13 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
                 return;
             }
 
-        String encoding = "GBK";
+        String encoding = "UTF-8";
         int codepage = 0;
         int widthTimes = 0;
         int heigthTimes = 0;
         int fonttype = 0;
         if (options != null) {
-            encoding = options.hasKey("encoding") ? options.getString("encoding") : "GBK";
+            encoding = options.hasKey("encoding") ? options.getString("encoding") : "UTF-8";
             codepage = options.hasKey("codepage") ? options.getInt("codepage") : 0;
             widthTimes = options.hasKey("widthtimes") ? options.getInt("widthtimes") : 0;
             heigthTimes = options.hasKey("heigthtimes") ? options.getInt("heigthtimes") : 0;

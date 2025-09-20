@@ -1,10 +1,10 @@
-package cn.jystudio.bluetooth.tsc;
+package cn.sri.bluetooth.tsc;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
-import cn.jystudio.bluetooth.BluetoothService;
-import cn.jystudio.bluetooth.BluetoothServiceStateObserver;
+import cn.sri.bluetooth.BluetoothService;
+import cn.sri.bluetooth.BluetoothServiceStateObserver;
 import com.facebook.react.bridge.*;
 
 import java.util.Map;

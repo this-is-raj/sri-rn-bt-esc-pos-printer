@@ -164,13 +164,13 @@ RCT_EXPORT_METHOD(printText:(NSString *) text withOptions:(NSDictionary *) optio
           reject(@"COMMAND_NOT_SEND",@"COMMAND_NOT_SEND",nil);
     }else{
         @try{
-    //encoding:'GBK',
+    //encoding:'UTF-8',
     //codepage:0,
     //widthtimes:0,
     //heigthtimes:0,
     //fonttype:1
         NSString *encodig = [options valueForKey:@"encoding"];
-        if(!encodig) encodig=@"GBK";
+        if(!encodig) encodig=@"UTF-8";
             NSInteger codePage = [[options valueForKey:@"codepage"] integerValue];NSLog(@"Got codepage from options: %ld",codePage);
         if(!codePage) codePage = 0;
         NSInteger widthTimes = [[options valueForKey:@"widthtimes"] integerValue];
@@ -304,7 +304,7 @@ RCT_EXPORT_METHOD(printColumn:(NSArray *)columnWidths
     }else{
         @try{
             NSString *encodig = [options valueForKey:@"encoding"];
-            if(!encodig) encodig=@"GBK";
+            if(!encodig) encodig=@"UTF-8";
             NSInteger codePage = [[options valueForKey:@"codepage"] integerValue];NSLog(@"Got codepage from options: %ld",codePage);
             if(!codePage) codePage = 0;
             NSInteger widthTimes = [[options valueForKey:@"widthtimes"] integerValue];

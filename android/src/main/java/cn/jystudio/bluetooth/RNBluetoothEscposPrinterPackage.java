@@ -1,12 +1,12 @@
 
-package cn.jystudio.bluetooth;
+package cn.sri.bluetooth;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import cn.jystudio.bluetooth.escpos.RNBluetoothEscposPrinterModule;
-import cn.jystudio.bluetooth.tsc.RNBluetoothTscPrinterModule;
+import cn.sri.bluetooth.escpos.RNBluetoothEscposPrinterModule;
+import cn.sri.bluetooth.tsc.RNBluetoothTscPrinterModule;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;

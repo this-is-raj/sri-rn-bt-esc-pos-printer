@@ -1,4 +1,4 @@
-package cn.jystudio.bluetooth.escpos.command.sdk;
+package cn.sri.bluetooth.escpos.command.sdk;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
@@ -374,7 +374,7 @@ public class PrinterCommand {
 
         byte[] bCodeData = null;
         try {
-            bCodeData = str.getBytes("GBK");
+            bCodeData = str.getBytes("UTF-8");
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -415,7 +415,7 @@ public class PrinterCommand {
 
         byte[] bCodeData = null;
         try {
-            bCodeData = str.getBytes("GBK");
+            bCodeData = str.getBytes("UTF-8");
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -464,7 +464,7 @@ public class PrinterCommand {
 
         byte[] strData = null;
         try {
-            strData = str.getBytes("GBK");
+            strData = str.getBytes("UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             return null;
