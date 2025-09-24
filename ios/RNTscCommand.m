@@ -26,7 +26,7 @@
 -(void)addStrToCommand:(NSString *)str
 {
     if(str){
-    //encoding UTF-8 ? GBK ? GB2312?
+    //encoding GBK? UTF-8? GB2312?
         [_command appendData:[str dataUsingEncoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)]];
     }
 }

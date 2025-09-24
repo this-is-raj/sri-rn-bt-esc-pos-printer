@@ -1,0 +1,23 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="cn.sri.bluetooth" >
+4
+5    <uses-sdk android:minSdkVersion="16" />
+6
+7    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+7-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:4:5-74
+7-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:4:22-71
+8    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+8-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:5:5-76
+8-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:5:22-73
+9    <uses-permission android:name="android.permission.BLUETOOTH" />
+9-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:6:5-68
+9-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:6:22-65
+10    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+10-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:7:5-80
+10-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:7:22-78
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:8:5-78
+11-->/Users/sri/Desktop/my-projects/store-manager/test-111 copy/store-manager/node_modules/sri-rn-bt-esc-pos-printer/android/src/main/AndroidManifest.xml:8:22-76
+12
+13</manifest>
