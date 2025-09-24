@@ -132,13 +132,13 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
     @ReactMethod
     public void printText(String text, @Nullable  ReadableMap options, final Promise promise) {
         try {
-            String encoding = "UTF-8";
+            String encoding = "GBK";
             int codepage = 0;
             int widthTimes = 0;
             int heigthTimes=0;
             int fonttype=0;
             if(options!=null) {
-                encoding = options.hasKey("encoding") ? options.getString("encoding") : "UTF-8";
+                encoding = options.hasKey("encoding") ? options.getString("encoding") : "GBK";
                 codepage = options.hasKey("codepage") ? options.getInt("codepage") : 0;
                 widthTimes = options.hasKey("widthtimes") ? options.getInt("widthtimes") : 0;
                 heigthTimes = options.hasKey("heigthtimes") ? options.getInt("heigthtimes") : 0;
@@ -178,13 +178,13 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
                 return;
             }
 
-        String encoding = "UTF-8";
+        String encoding = "GBK";
         int codepage = 0;
         int widthTimes = 0;
         int heigthTimes = 0;
         int fonttype = 0;
         if (options != null) {
-            encoding = options.hasKey("encoding") ? options.getString("encoding") : "UTF-8";
+            encoding = options.hasKey("encoding") ? options.getString("encoding") : "GBK";
             codepage = options.hasKey("codepage") ? options.getInt("codepage") : 0;
             widthTimes = options.hasKey("widthtimes") ? options.getInt("widthtimes") : 0;
             heigthTimes = options.hasKey("heigthtimes") ? options.getInt("heigthtimes") : 0;
@@ -341,7 +341,7 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
              * Returns: byte[]
              */
             byte[] data = PrintPicture.POS_PrintBMP(mBitmap, width, nMode, leftPadding);
-            //  SendDataByte(buffer);
+            //	SendDataByte(buffer);
             sendDataByte(Command.ESC_Init);
             sendDataByte(Command.LF);
             sendDataByte(data);
@@ -433,29 +433,6 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
         byte[] command = PrinterCommand.getBarCodeCommand(str, nType, nWidthX, nHeight, nHriFontType, nHriFontPosition);
         sendDataByte(command);
     }
-
-    @ReactMethod
-    public void openDrawer(int nMode, int nTime1, int nTime2) {
-        try{
-            byte[] command = PrinterCommand.POS_Set_Cashbox(nMode, nTime1, nTime2);
-            sendDataByte(command);
-
-         }catch (Exception e){
-            Log.d(TAG, e.getMessage());
-        }
-    }
-
-
-    @ReactMethod
-    public void cutOnePoint() {
-        try{
-            byte[] command = PrinterCommand.POS_Cut_One_Point();
-            sendDataByte(command);
-
-         }catch (Exception e){
-            Log.d(TAG, e.getMessage());
-        }
-    }    
 
     private boolean sendDataByte(byte[] data) {
         if (data==null || mService.getState() != BluetoothService.STATE_CONNECTED) {

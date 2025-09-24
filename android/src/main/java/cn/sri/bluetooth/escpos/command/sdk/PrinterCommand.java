@@ -239,8 +239,11 @@ public class PrinterCommand {
         byte[] escM = Arrays.copyOf(Command.ESC_M, Command.ESC_M.length);
         escM[2] = (byte) nFontType;
         byte[] data = null;
-        data = concatAll(gsExclamationMark, escT, escM, pbString);
-        
+        if (codepage == 0) {
+            data = concatAll(gsExclamationMark, escT, Command.FS_and, escM, pbString);
+        } else {
+            data = concatAll(gsExclamationMark, escT, Command.FS_dot, escM, pbString);
+        }
         return data;
     }
 
@@ -343,16 +346,6 @@ public class PrinterCommand {
 
     }
 
-    /**
-     * 
-     *
-     * 
-     * @return
-     */
-    public static byte[] POS_Cut_One_Point() {
-        return Command.GS_i;
-    }    
-
 //***********************************以下函数为公开函数***********************************************************//
 
     /**
@@ -374,7 +367,7 @@ public class PrinterCommand {
 
         byte[] bCodeData = null;
         try {
-            bCodeData = str.getBytes("UTF-8");
+            bCodeData = str.getBytes("GBK");
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -415,7 +408,7 @@ public class PrinterCommand {
 
         byte[] bCodeData = null;
         try {
-            bCodeData = str.getBytes("UTF-8");
+            bCodeData = str.getBytes("GBK");
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -464,7 +457,7 @@ public class PrinterCommand {
 
         byte[] strData = null;
         try {
-            strData = str.getBytes("UTF-8");
+            strData = str.getBytes("GBK");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             return null;
